@@ -1,6 +1,8 @@
 package com.github.oimogenius.introductionmod;
 
+import com.github.oimogenius.introductionmod.item.IntroductionItems;
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -23,6 +25,9 @@ public class IntroductionMod {
 
         modEventBus.addListener(this::commonSetup);
 
+        // アイテムレジストリをイベントバスに登録
+        IntroductionItems.register(modEventBus);
+
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
@@ -33,6 +38,11 @@ public class IntroductionMod {
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        // 材料タブにオリハルコンを追加
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(IntroductionItems.RAW_ORIHALCON);
+            event.accept(IntroductionItems.ORIHALCON_INGOT);
+        }
     }
 
     @SubscribeEvent
