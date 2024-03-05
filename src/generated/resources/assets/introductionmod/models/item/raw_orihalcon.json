@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "introductionmod:item/orihalcon_ingot"
+    "layer0": "introductionmod:item/raw_orihalcon"
   }
 }
