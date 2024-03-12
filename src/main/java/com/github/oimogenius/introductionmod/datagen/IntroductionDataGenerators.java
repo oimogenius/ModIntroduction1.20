@@ -26,5 +26,8 @@ public class IntroductionDataGenerators {
         generator.addProvider(event.includeClient(), new ENUSLanguageProvider(packOutput));
         // 言語ファイル（日本語）
         generator.addProvider(event.includeClient(), new JAJPLanguageProvider(packOutput));
+
+        // レシピ
+        generator.addProvider(event.includeServer(), new IntroductionRecipeProvider(packOutput));
     }
 }
