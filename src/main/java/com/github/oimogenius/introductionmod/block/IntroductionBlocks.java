@@ -23,9 +23,11 @@ public class IntroductionBlocks {
     // レジストリにブロックを追加
     public static final RegistryObject<Block> ORIHALCON_BLOCK = registerBlockItem("orihalcon_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.ANVIL)));
+
+    // ルートテーブルを作成しない場合は、プロパティでnoLootTable()を指定する
     public static final RegistryObject<Block> RAW_ORIHALCON_BLOCK = registerBlockItem(
             "raw_orihalcon_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.ANVIL)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.ANVIL).noLootTable()));
 
     /* ブロックアイテム作成用メソッド */
     private static <T extends Block> RegistryObject<T> registerBlockItem(String name,

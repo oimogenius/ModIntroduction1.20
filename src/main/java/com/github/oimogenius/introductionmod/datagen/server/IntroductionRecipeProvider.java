@@ -1,4 +1,4 @@
-package com.github.oimogenius.introductionmod.datagen;
+package com.github.oimogenius.introductionmod.datagen.server;
 
 import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;

@@ -1,6 +1,12 @@
 package com.github.oimogenius.introductionmod.datagen;
 
 import com.github.oimogenius.introductionmod.IntroductionMod;
+import com.github.oimogenius.introductionmod.datagen.client.ENUSLanguageProvider;
+import com.github.oimogenius.introductionmod.datagen.client.IntroductionBlockStateProvider;
+import com.github.oimogenius.introductionmod.datagen.client.IntroductionItemModelProvider;
+import com.github.oimogenius.introductionmod.datagen.client.JAJPLanguageProvider;
+import com.github.oimogenius.introductionmod.datagen.server.IntroductionRecipeProvider;
+import com.github.oimogenius.introductionmod.datagen.server.loot.IntroductionLootTables;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -29,5 +35,7 @@ public class IntroductionDataGenerators {
 
         // レシピ
         generator.addProvider(event.includeServer(), new IntroductionRecipeProvider(packOutput));
+        // ルートテーブル
+        generator.addProvider(event.includeServer(), IntroductionLootTables.create(packOutput));
     }
 }
