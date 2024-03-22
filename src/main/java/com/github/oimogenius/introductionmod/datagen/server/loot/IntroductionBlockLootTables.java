@@ -16,6 +16,7 @@ public class IntroductionBlockLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(IntroductionBlocks.ORIHALCON_BLOCK.get());
+        this.dropSelf(IntroductionBlocks.RAW_ORIHALCON_BLOCK.get());
     }
 
     @Override

@@ -1,0 +1,4 @@
+// 1.20.2	2024-03-21T21:41:35.949841	Tags for minecraft:block mod id introductionmod
+55adea698e5d92cfcc9f18cbb02c4d6e267d764f data/forge/tags/blocks/needs_netherite_tool.json
+1531afa6af68496b0cffb08715ec323dd97ed474 data/minecraft/tags/blocks/mineable/pickaxe.json
+8f3a3193911e39a927f617ddae54a105247838b2 data/minecraft/tags/blocks/needs_diamond_tool.json
