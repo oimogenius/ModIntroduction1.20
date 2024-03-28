@@ -6,6 +6,7 @@ import com.github.oimogenius.introductionmod.datagen.client.IntroductionBlockSta
 import com.github.oimogenius.introductionmod.datagen.client.IntroductionItemModelProvider;
 import com.github.oimogenius.introductionmod.datagen.client.JAJPLanguageProvider;
 import com.github.oimogenius.introductionmod.datagen.server.IntroductionBlockTagsProvider;
+import com.github.oimogenius.introductionmod.datagen.server.IntroductionGlobalLootModifierProvider;
 import com.github.oimogenius.introductionmod.datagen.server.IntroductionRecipeProvider;
 import com.github.oimogenius.introductionmod.datagen.server.loot.IntroductionLootTables;
 import net.minecraft.core.HolderLookup;
@@ -45,5 +46,8 @@ public class IntroductionDataGenerators {
         // ブロックタグ
         generator.addProvider(event.includeServer(), new IntroductionBlockTagsProvider(packOutput
                 ,lookUpProvider, existingFileHelper));
+        // GlobalLootModifier
+        generator.addProvider(event.includeServer(),
+                new IntroductionGlobalLootModifierProvider(packOutput));
     }
 }
