@@ -1,5 +1,6 @@
-// 1.20.2	2024-03-27T08:07:53.651195	Global Loot Modifiers : introductionmod
-aab5fda62501400b0c62e620266ead776aec239b data/forge/loot_modifiers/global_loot_modifiers.json
+// 1.20.2	2024-03-31T04:43:37.0251918	Global Loot Modifiers : introductionmod
+ea2f4cfa5b517919332615a57698fe28f0067688 data/forge/loot_modifiers/global_loot_modifiers.json
 07d590744300928821beabd02dd67a52bf81bd4a data/introductionmod/loot_modifiers/orihalcon_ingot_from_ruined_portal.json
-52a466f9ea6b9a4079772b3682e688629c17bb69 data/introductionmod/loot_modifiers/orihalcon_ingot_from_sniffer_digging.json
+c0df5907e3bf3fd3fd2064fca05a8f81dbed6047 data/introductionmod/loot_modifiers/orihalcon_ingot_from_sniffer_digging.json
+9fe298d17c80bb5370d479105053fc80719d79e4 data/introductionmod/loot_modifiers/orihalcon_ingot_from_sus_sand.json
 c36e603c04254b95221b65f6f017cf21d2482ab1 data/introductionmod/loot_modifiers/orihalcon_ingot_from_zombie.json

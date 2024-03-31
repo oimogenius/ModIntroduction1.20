@@ -4,7 +4,7 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:gameplay/sniffer_digging"
+      "loot_table_id": "minecraft:archaeology/desert_pyramid"
     }
   ],
   "item": "introductionmod:orihalcon_ingot"
