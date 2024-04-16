@@ -24,6 +24,8 @@ public class IntroductionTabs {
                         pOutput.accept(IntroductionItems.ORIHALCON_INGOT.get());
                         pOutput.accept(IntroductionBlocks.ORIHALCON_BLOCK.get());
                         pOutput.accept(IntroductionBlocks.RAW_ORIHALCON_BLOCK.get());
+                        pOutput.accept(IntroductionBlocks.ORIHALCON_ORE.get());
+                        pOutput.accept(IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE.get());
                     }))
                     .build());
 

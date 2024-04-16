@@ -2,10 +2,12 @@ package com.github.oimogenius.introductionmod.block;
 
 import com.github.oimogenius.introductionmod.IntroductionMod;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -23,11 +25,15 @@ public class IntroductionBlocks {
     // レジストリにブロックを追加
     public static final RegistryObject<Block> ORIHALCON_BLOCK = registerBlockItem("orihalcon_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.ANVIL)));
-
-    // ルートテーブルを作成しない場合は、プロパティでnoLootTable()を指定する
     public static final RegistryObject<Block> RAW_ORIHALCON_BLOCK = registerBlockItem(
             "raw_orihalcon_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).sound(SoundType.ANVIL)));
+    public static final RegistryObject<Block> ORIHALCON_ORE = registerBlockItem("orihalcon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE),
+                    UniformInt.of(3, 7)));
+    public static final RegistryObject<Block> DEEPSLATE_ORIHALCON_ORE = registerBlockItem(
+            "deepslate_orihalcon_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
 
     /* ブロックアイテム作成用メソッド */
     private static <T extends Block> RegistryObject<T> registerBlockItem(String name,

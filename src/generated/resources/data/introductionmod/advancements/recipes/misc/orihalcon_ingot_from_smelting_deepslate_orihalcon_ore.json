@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_deepslate_orihalcon_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "introductionmod:deepslate_orihalcon_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "introductionmod:orihalcon_ingot_from_smelting_deepslate_orihalcon_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_deepslate_orihalcon_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "introductionmod:orihalcon_ingot_from_smelting_deepslate_orihalcon_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

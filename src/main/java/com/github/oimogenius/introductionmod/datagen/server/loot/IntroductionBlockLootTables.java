@@ -1,6 +1,7 @@
 package com.github.oimogenius.introductionmod.datagen.server.loot;
 
 import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
+import com.github.oimogenius.introductionmod.item.IntroductionItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
@@ -17,6 +18,10 @@ public class IntroductionBlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(IntroductionBlocks.ORIHALCON_BLOCK.get());
         this.dropSelf(IntroductionBlocks.RAW_ORIHALCON_BLOCK.get());
+        this.add(IntroductionBlocks.ORIHALCON_ORE.get(),
+                block -> this.createOreDrop(block, IntroductionItems.RAW_ORIHALCON.get()));
+        this.add(IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE.get(),
+                block -> this.createOreDrop(block, IntroductionItems.RAW_ORIHALCON.get()));
     }
 
     @Override

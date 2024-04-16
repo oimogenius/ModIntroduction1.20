@@ -22,5 +22,8 @@ public class JAJPLanguageProvider extends LanguageProvider {
 
         addBlock(IntroductionBlocks.ORIHALCON_BLOCK, "オリハルコンブロック");
         addBlock(IntroductionBlocks.RAW_ORIHALCON_BLOCK, "オリハルコンの原石ブロック");
+        addBlock(IntroductionBlocks.ORIHALCON_ORE, "オリハルコン鉱石");
+        addBlock(IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE, "深層オリハルコン鉱石");
+
     }
 }

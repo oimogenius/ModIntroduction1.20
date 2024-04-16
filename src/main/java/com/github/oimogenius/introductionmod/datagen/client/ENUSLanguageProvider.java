@@ -22,5 +22,7 @@ public class ENUSLanguageProvider extends LanguageProvider {
 
         addBlock(IntroductionBlocks.ORIHALCON_BLOCK, "Orihalcon Block");
         addBlock(IntroductionBlocks.RAW_ORIHALCON_BLOCK, "Raw Orihalcon Block");
+        addBlock(IntroductionBlocks.ORIHALCON_ORE, "Orihalcon Ore");
+        addBlock(IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE, "Deepslate Orihalcon Ore");
     }
 }

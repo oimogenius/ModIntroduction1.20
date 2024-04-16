@@ -22,9 +22,15 @@ public class IntroductionBlockTagsProvider extends BlockTagsProvider {
         // 適正ツール：ツルハシ
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(IntroductionBlocks.ORIHALCON_BLOCK.get(),
-                        IntroductionBlocks.RAW_ORIHALCON_BLOCK.get());
+                        IntroductionBlocks.RAW_ORIHALCON_BLOCK.get(),
+                        IntroductionBlocks.ORIHALCON_ORE.get(),
+                        IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE.get()
+                );
         this.tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(IntroductionBlocks.ORIHALCON_BLOCK.get());
+                .add(IntroductionBlocks.ORIHALCON_BLOCK.get(),
+                        IntroductionBlocks.ORIHALCON_ORE.get(),
+                        IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE.get()
+                );
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(IntroductionBlocks.RAW_ORIHALCON_BLOCK.get());
     }

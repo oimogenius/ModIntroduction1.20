@@ -17,6 +17,8 @@ public class IntroductionBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         simpleBlockWithItem(IntroductionBlocks.ORIHALCON_BLOCK);
         simpleBlockWithItem(IntroductionBlocks.RAW_ORIHALCON_BLOCK);
+        simpleBlockWithItem(IntroductionBlocks.ORIHALCON_ORE);
+        simpleBlockWithItem(IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE);
     }
 
     private void simpleBlockWithItem(RegistryObject<Block> block) {
