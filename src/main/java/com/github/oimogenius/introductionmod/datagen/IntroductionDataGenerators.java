@@ -8,6 +8,7 @@ import com.github.oimogenius.introductionmod.datagen.client.JAJPLanguageProvider
 import com.github.oimogenius.introductionmod.datagen.server.IntroductionBlockTagsProvider;
 import com.github.oimogenius.introductionmod.datagen.server.IntroductionGlobalLootModifierProvider;
 import com.github.oimogenius.introductionmod.datagen.server.IntroductionRecipeProvider;
+import com.github.oimogenius.introductionmod.datagen.server.IntroductionWorldGenProvider;
 import com.github.oimogenius.introductionmod.datagen.server.loot.IntroductionLootTables;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -49,5 +50,8 @@ public class IntroductionDataGenerators {
         // GlobalLootModifier
         generator.addProvider(event.includeServer(),
                 new IntroductionGlobalLootModifierProvider(packOutput));
+        // WorldGen
+        generator.addProvider(event.includeServer(),
+                new IntroductionWorldGenProvider(packOutput, lookUpProvider));
     }
 }
