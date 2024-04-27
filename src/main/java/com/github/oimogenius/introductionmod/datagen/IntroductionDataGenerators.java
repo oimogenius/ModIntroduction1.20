@@ -5,10 +5,7 @@ import com.github.oimogenius.introductionmod.datagen.client.ENUSLanguageProvider
 import com.github.oimogenius.introductionmod.datagen.client.IntroductionBlockStateProvider;
 import com.github.oimogenius.introductionmod.datagen.client.IntroductionItemModelProvider;
 import com.github.oimogenius.introductionmod.datagen.client.JAJPLanguageProvider;
-import com.github.oimogenius.introductionmod.datagen.server.IntroductionBlockTagsProvider;
-import com.github.oimogenius.introductionmod.datagen.server.IntroductionGlobalLootModifierProvider;
-import com.github.oimogenius.introductionmod.datagen.server.IntroductionRecipeProvider;
-import com.github.oimogenius.introductionmod.datagen.server.IntroductionWorldGenProvider;
+import com.github.oimogenius.introductionmod.datagen.server.*;
 import com.github.oimogenius.introductionmod.datagen.server.loot.IntroductionLootTables;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -45,8 +42,12 @@ public class IntroductionDataGenerators {
         // ルートテーブル
         generator.addProvider(event.includeServer(), IntroductionLootTables.create(packOutput));
         // ブロックタグ
-        generator.addProvider(event.includeServer(), new IntroductionBlockTagsProvider(packOutput
+        var blockTagsProvider = generator.addProvider(event.includeServer(),
+                new IntroductionBlockTagsProvider(packOutput
                 ,lookUpProvider, existingFileHelper));
+        // アイテムタグ
+        generator.addProvider(event.includeServer(), new IntroductionItemTagsProvider(
+                packOutput, lookUpProvider, blockTagsProvider.contentsGetter(),existingFileHelper));
         // GlobalLootModifier
         generator.addProvider(event.includeServer(),
                 new IntroductionGlobalLootModifierProvider(packOutput));

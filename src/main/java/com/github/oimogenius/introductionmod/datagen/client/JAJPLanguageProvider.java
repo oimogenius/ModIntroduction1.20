@@ -25,5 +25,10 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addBlock(IntroductionBlocks.ORIHALCON_ORE, "オリハルコン鉱石");
         addBlock(IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE, "深層オリハルコン鉱石");
 
+        addBlock(IntroductionBlocks.CURSED_LOG, "呪われた原木");
+        addBlock(IntroductionBlocks.STRIPPED_CURSED_LOG, "樹皮を剥いだ呪われた原木");
+        addBlock(IntroductionBlocks.CURSED_WOOD, "呪われた木");
+        addBlock(IntroductionBlocks.STRIPPED_CURSED_WOOD, "樹皮を剥いだ呪われた木");
+        addBlock(IntroductionBlocks.CURSED_LEAVES, "呪われた葉");
     }
 }

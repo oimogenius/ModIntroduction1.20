@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "introductionmod:block/cursed_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "introductionmod:block/cursed_log"
+    },
+    "axis=z": {
+      "model": "introductionmod:block/cursed_log_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -39,6 +39,11 @@ public class IntroductionRecipeProvider extends RecipeProvider {
         oreBlasting(pRecipeOutput, ORIHALCON_SMELTABLE, RecipeCategory.MISC,
                 IntroductionItems.ORIHALCON_INGOT.get(),
                 1.0f, 100, "orihalcon");
+
+        woodFromLogs(pRecipeOutput, IntroductionBlocks.CURSED_WOOD.get(),
+                IntroductionBlocks.CURSED_LOG.get());
+        woodFromLogs(pRecipeOutput, IntroductionBlocks.STRIPPED_CURSED_WOOD.get(),
+                IntroductionBlocks.STRIPPED_CURSED_LOG.get());
     }
 
     // かまど用のレシピ

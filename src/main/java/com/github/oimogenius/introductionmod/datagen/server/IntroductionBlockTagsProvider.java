@@ -2,6 +2,7 @@ package com.github.oimogenius.introductionmod.datagen.server;
 
 import com.github.oimogenius.introductionmod.IntroductionMod;
 import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
+import com.github.oimogenius.introductionmod.tag.IntroductionTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -33,5 +34,25 @@ public class IntroductionBlockTagsProvider extends BlockTagsProvider {
                 );
         this.tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(IntroductionBlocks.RAW_ORIHALCON_BLOCK.get());
+
+        // 板材のレシピを作るときに使う
+        this.tag(IntroductionTags.Blocks.CURSED_LOG)
+                .add(IntroductionBlocks.CURSED_LOG.get())
+                .add(IntroductionBlocks.STRIPPED_CURSED_LOG.get())
+                .add(IntroductionBlocks.CURSED_WOOD.get())
+                .add(IntroductionBlocks.STRIPPED_CURSED_WOOD.get());
+        // 原木を使うレシピや、地面かどうかの判定処理に使われる
+        this.tag(BlockTags.LOGS)
+                .add(IntroductionBlocks.CURSED_LOG.get())
+                .add(IntroductionBlocks.STRIPPED_CURSED_LOG.get());
+        // 焼くと木炭になる
+        this.tag(BlockTags.LOGS_THAT_BURN)
+                .add(IntroductionBlocks.CURSED_LOG.get())
+                .add(IntroductionBlocks.STRIPPED_CURSED_LOG.get())
+                .add(IntroductionBlocks.CURSED_WOOD.get())
+                .add(IntroductionBlocks.STRIPPED_CURSED_WOOD.get());
+        // 地面かどうかの判定に使われたり、ハサミで回収できるようになったりする
+        this.tag(BlockTags.LEAVES)
+                .add(IntroductionBlocks.CURSED_LEAVES.get());
     }
 }

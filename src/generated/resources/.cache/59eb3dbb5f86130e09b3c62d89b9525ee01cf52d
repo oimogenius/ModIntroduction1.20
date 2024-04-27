@@ -1,5 +1,10 @@
-// 1.20.2	2024-04-15T12:12:05.4142278	Loot Tables
+// 1.20.2	2024-04-26T03:40:12.2849174	Loot Tables
+553a6a135c59009a7d324f501e30cfaa80d5798e data/introductionmod/loot_tables/blocks/cursed_leaves.json
+66d9220a0a99caf77816260029adfa5bd616e6ea data/introductionmod/loot_tables/blocks/cursed_log.json
+431e4ca709c58082ee3fce2eb909af9d46c3a729 data/introductionmod/loot_tables/blocks/cursed_wood.json
 1bd7c3d4a75a60fee1cd04f6ec6c5a8258136b85 data/introductionmod/loot_tables/blocks/deepslate_orihalcon_ore.json
 a88b090dacbd5888a1ed457c2be99e3b88dca659 data/introductionmod/loot_tables/blocks/orihalcon_block.json
 ea565b08cbd4b5d4246fd70e6a06c1abec1c76cf data/introductionmod/loot_tables/blocks/orihalcon_ore.json
 387a24b27f96384ef9ddd2c5b625112ee2d7c6d0 data/introductionmod/loot_tables/blocks/raw_orihalcon_block.json
+9f21915e3e131901704853c30b860de31314d8d7 data/introductionmod/loot_tables/blocks/stripped_cursed_log.json
+440a4dba461a8bc2296321de1add6f577f66d226 data/introductionmod/loot_tables/blocks/stripped_cursed_wood.json

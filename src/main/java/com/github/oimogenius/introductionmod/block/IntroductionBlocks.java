@@ -1,6 +1,9 @@
 package com.github.oimogenius.introductionmod.block;
 
 import com.github.oimogenius.introductionmod.IntroductionMod;
+import com.github.oimogenius.introductionmod.block.custom.IntroductionLeavesBlock;
+import com.github.oimogenius.introductionmod.block.custom.IntroductionLogBlock;
+import com.github.oimogenius.introductionmod.block.custom.IntroductionStrippableLogBlock;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -34,6 +37,28 @@ public class IntroductionBlocks {
     public static final RegistryObject<Block> DEEPSLATE_ORIHALCON_ORE = registerBlockItem(
             "deepslate_orihalcon_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE)));
+
+    // 呪われた木
+    public static final RegistryObject<Block> STRIPPED_CURSED_LOG = registerBlockItem(
+            "stripped_cursed_log",
+            () -> new IntroductionLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG).sound(SoundType.BONE_BLOCK)));
+    public static final RegistryObject<Block> STRIPPED_CURSED_WOOD = registerBlockItem(
+            "stripped_cursed_wood",
+            () -> new IntroductionLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).sound(SoundType.BONE_BLOCK)));
+    public static final RegistryObject<Block> CURSED_LOG = registerBlockItem(
+            "cursed_log",
+            () -> new IntroductionStrippableLogBlock(
+                    BlockBehaviour.Properties.copy(Blocks.OAK_LOG).sound(SoundType.BONE_BLOCK),
+                    STRIPPED_CURSED_LOG));
+    public static final RegistryObject<Block> CURSED_WOOD = registerBlockItem(
+            "cursed_wood",
+            () -> new IntroductionStrippableLogBlock(
+                    BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).sound(SoundType.BONE_BLOCK),
+                    STRIPPED_CURSED_WOOD));
+    public static final RegistryObject<Block> CURSED_LEAVES = registerBlockItem(
+            "cursed_leaves",
+            () -> new IntroductionLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+
 
     /* ブロックアイテム作成用メソッド */
     private static <T extends Block> RegistryObject<T> registerBlockItem(String name,

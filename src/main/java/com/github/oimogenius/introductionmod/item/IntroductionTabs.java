@@ -26,6 +26,11 @@ public class IntroductionTabs {
                         pOutput.accept(IntroductionBlocks.RAW_ORIHALCON_BLOCK.get());
                         pOutput.accept(IntroductionBlocks.ORIHALCON_ORE.get());
                         pOutput.accept(IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_LOG.get());
+                        pOutput.accept(IntroductionBlocks.STRIPPED_CURSED_LOG.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_WOOD.get());
+                        pOutput.accept(IntroductionBlocks.STRIPPED_CURSED_WOOD.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_LEAVES.get());
                     }))
                     .build());
 

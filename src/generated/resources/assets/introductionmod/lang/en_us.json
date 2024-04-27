@@ -1,8 +1,13 @@
 {
+  "block.introductionmod.cursed_leaves": "Cursed Leaves",
+  "block.introductionmod.cursed_log": "Cursed Log",
+  "block.introductionmod.cursed_wood": "Cursed Wood",
   "block.introductionmod.deepslate_orihalcon_ore": "Deepslate Orihalcon Ore",
   "block.introductionmod.orihalcon_block": "Orihalcon Block",
   "block.introductionmod.orihalcon_ore": "Orihalcon Ore",
   "block.introductionmod.raw_orihalcon_block": "Raw Orihalcon Block",
+  "block.introductionmod.stripped_cursed_log": "Stripped Cursed Log",
+  "block.introductionmod.stripped_cursed_wood": "Stripped Cursed Wood",
   "creativetabs.introduction_tab": "Introdution",
   "item.introductionmod.orihalcon_ingot": "Orihalcon Ingot",
   "item.introductionmod.raw_orihalcon": "Raw Orihalcon"

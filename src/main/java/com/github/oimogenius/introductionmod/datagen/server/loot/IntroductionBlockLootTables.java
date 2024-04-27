@@ -22,6 +22,14 @@ public class IntroductionBlockLootTables extends BlockLootSubProvider {
                 block -> this.createOreDrop(block, IntroductionItems.RAW_ORIHALCON.get()));
         this.add(IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE.get(),
                 block -> this.createOreDrop(block, IntroductionItems.RAW_ORIHALCON.get()));
+        this.dropSelf(IntroductionBlocks.CURSED_LOG.get());
+        this.dropSelf(IntroductionBlocks.STRIPPED_CURSED_LOG.get());
+        this.dropSelf(IntroductionBlocks.CURSED_WOOD.get());
+        this.dropSelf(IntroductionBlocks.STRIPPED_CURSED_WOOD.get());
+        // TODO:呪われた苗木に変更
+        this.add(IntroductionBlocks.CURSED_LEAVES.get(), block ->
+                createLeavesDrops(block, IntroductionBlocks.ORIHALCON_BLOCK.get(),
+                        NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     @Override
