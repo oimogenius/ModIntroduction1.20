@@ -1,0 +1,14 @@
+{
+  "type": "introductionmod:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:entities/zombie"
+    },
+    {
+      "chance": 0.5,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "introductionmod:orihalcon_ingot"
+}

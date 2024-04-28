@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "introductionmod:block/raw_orihalcon_block"
+  }
+}

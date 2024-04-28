@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_orihalcon": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "introductionmod:raw_orihalcon"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "introductionmod:orihalcon_ingot_from_blasting_raw_orihalcon"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_orihalcon"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "introductionmod:orihalcon_ingot_from_blasting_raw_orihalcon"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,14 @@
+{
+  "block.introductionmod.cursed_leaves": "呪われた葉",
+  "block.introductionmod.cursed_log": "呪われた原木",
+  "block.introductionmod.cursed_wood": "呪われた木",
+  "block.introductionmod.deepslate_orihalcon_ore": "深層オリハルコン鉱石",
+  "block.introductionmod.orihalcon_block": "オリハルコンブロック",
+  "block.introductionmod.orihalcon_ore": "オリハルコン鉱石",
+  "block.introductionmod.raw_orihalcon_block": "オリハルコンの原石ブロック",
+  "block.introductionmod.stripped_cursed_log": "樹皮を剥いだ呪われた原木",
+  "block.introductionmod.stripped_cursed_wood": "樹皮を剥いだ呪われた木",
+  "creativetabs.introduction_tab": "入門",
+  "item.introductionmod.orihalcon_ingot": "オリハルコンインゴット",
+  "item.introductionmod.raw_orihalcon": "オリハルコンの原石"
+}

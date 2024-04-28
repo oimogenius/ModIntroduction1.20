@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "introductionmod:block/stripped_cursed_log",
+    "side": "introductionmod:block/stripped_cursed_log"
+  }
+}

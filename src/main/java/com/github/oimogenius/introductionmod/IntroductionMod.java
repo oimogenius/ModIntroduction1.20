@@ -1,7 +1,9 @@
 package com.github.oimogenius.introductionmod;
 
+import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
 import com.github.oimogenius.introductionmod.item.IntroductionTabs;
+import com.github.oimogenius.introductionmod.loot.IntroductionLootModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -30,6 +32,10 @@ public class IntroductionMod {
         IntroductionItems.register(modEventBus);
         // クリエイティブタブレジストリをイベントバスに登録
         IntroductionTabs.register(modEventBus);
+        // ブロックレジストリをイベントバスに登録
+        IntroductionBlocks.register(modEventBus);
+        // GlobalLootModifierレジストリをイベントバスに登録
+        IntroductionLootModifiers.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
