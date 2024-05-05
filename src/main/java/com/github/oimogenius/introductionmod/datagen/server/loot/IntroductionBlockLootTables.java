@@ -30,6 +30,18 @@ public class IntroductionBlockLootTables extends BlockLootSubProvider {
         this.add(IntroductionBlocks.CURSED_LEAVES.get(), block ->
                 createLeavesDrops(block, IntroductionBlocks.ORIHALCON_BLOCK.get(),
                         NORMAL_LEAVES_SAPLING_CHANCES));
+
+        this.dropSelf(IntroductionBlocks.CURSED_PLANKS.get());
+        this.dropSelf(IntroductionBlocks.CURSED_STAIRS.get());
+        this.dropSelf(IntroductionBlocks.CURSED_FENCE.get());
+        this.dropSelf(IntroductionBlocks.CURSED_FENCE_GATE.get());
+        this.dropSelf(IntroductionBlocks.CURSED_TRAPDOOR.get());
+        this.dropSelf(IntroductionBlocks.CURSED_BUTTON.get());
+        this.dropSelf(IntroductionBlocks.CURSED_PRESSURE_PLATE.get());
+        this.add(IntroductionBlocks.CURSED_SLAB.get(),
+                createSlabItemTable(IntroductionBlocks.CURSED_SLAB.get()));
+        this.add(IntroductionBlocks.CURSED_DOOR.get(),
+                createDoorTable(IntroductionBlocks.CURSED_DOOR.get()));
     }
 
     @Override

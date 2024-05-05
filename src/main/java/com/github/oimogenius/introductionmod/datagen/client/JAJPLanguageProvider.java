@@ -30,5 +30,15 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addBlock(IntroductionBlocks.CURSED_WOOD, "呪われた木");
         addBlock(IntroductionBlocks.STRIPPED_CURSED_WOOD, "樹皮を剥いだ呪われた木");
         addBlock(IntroductionBlocks.CURSED_LEAVES, "呪われた葉");
+
+        addBlock(IntroductionBlocks.CURSED_PLANKS, "呪われた板材");
+        addBlock(IntroductionBlocks.CURSED_SLAB, "呪われたハーフブロック");
+        addBlock(IntroductionBlocks.CURSED_STAIRS, "呪われた階段");
+        addBlock(IntroductionBlocks.CURSED_FENCE, "呪われたフェンス");
+        addBlock(IntroductionBlocks.CURSED_FENCE_GATE, "呪われたフェンスゲート");
+        addBlock(IntroductionBlocks.CURSED_DOOR, "呪われたドア");
+        addBlock(IntroductionBlocks.CURSED_TRAPDOOR, "呪われたトラップドア");
+        addBlock(IntroductionBlocks.CURSED_BUTTON, "呪われたボタン");
+        addBlock(IntroductionBlocks.CURSED_PRESSURE_PLATE, "呪われた感圧板");
     }
 }

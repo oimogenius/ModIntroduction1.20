@@ -3,6 +3,7 @@ package com.github.oimogenius.introductionmod.datagen.server;
 import com.github.oimogenius.introductionmod.IntroductionMod;
 import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
+import com.github.oimogenius.introductionmod.tag.IntroductionTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -44,6 +45,35 @@ public class IntroductionRecipeProvider extends RecipeProvider {
                 IntroductionBlocks.CURSED_LOG.get());
         woodFromLogs(pRecipeOutput, IntroductionBlocks.STRIPPED_CURSED_WOOD.get(),
                 IntroductionBlocks.STRIPPED_CURSED_LOG.get());
+
+        planksFromLog(pRecipeOutput,
+                IntroductionBlocks.CURSED_PLANKS.get(),
+                IntroductionTags.Items.CURSED_LOG, 4);
+        slab(pRecipeOutput, RecipeCategory.BUILDING_BLOCKS,
+                IntroductionBlocks.CURSED_SLAB.get(),
+                IntroductionBlocks.CURSED_PLANKS.get());
+        stairs(pRecipeOutput,
+                IntroductionBlocks.CURSED_STAIRS.get(),
+                IntroductionBlocks.CURSED_PLANKS.get());
+        fence(pRecipeOutput,
+                IntroductionBlocks.CURSED_FENCE.get(),
+                IntroductionBlocks.CURSED_PLANKS.get());
+        fenceGate(pRecipeOutput,
+                IntroductionBlocks.CURSED_FENCE_GATE.get(),
+                IntroductionBlocks.CURSED_PLANKS.get());
+        door(pRecipeOutput,
+                IntroductionBlocks.CURSED_DOOR.get(),
+                IntroductionBlocks.CURSED_PLANKS.get());
+        trapdoor(pRecipeOutput,
+                IntroductionBlocks.CURSED_TRAPDOOR.get(),
+                IntroductionBlocks.CURSED_PLANKS.get());
+        button(pRecipeOutput,
+                IntroductionBlocks.CURSED_BUTTON.get(),
+                IntroductionBlocks.CURSED_PLANKS.get());
+        pressurePlate(pRecipeOutput,
+                IntroductionBlocks.CURSED_PRESSURE_PLATE.get(),
+                IntroductionBlocks.CURSED_PLANKS.get());
+
     }
 
     // かまど用のレシピ
@@ -74,5 +104,38 @@ public class IntroductionRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(pPackedCategory, pPacked).define('#', pUnpacked)
                 .pattern("###").pattern("###").pattern("###")
                 .unlockedBy(getHasName(pUnpacked), has(pUnpacked)).save(pRecipeOutput);
+    }
+
+    private static void stairs(RecipeOutput pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
+        stairBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pRecipeOutput);
+    }
+    private static void fence(RecipeOutput pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
+        fenceBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pRecipeOutput);
+    }
+    private static void fenceGate(RecipeOutput pRecipeOutput, ItemLike pResult,
+                                  ItemLike pIngredient) {
+        fenceGateBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pRecipeOutput);
+    }
+    private static void door(RecipeOutput pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
+        doorBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pRecipeOutput);
+    }
+    private static void trapdoor(RecipeOutput pRecipeOutput, ItemLike pResult,
+                                 ItemLike pIngredient) {
+        trapdoorBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pRecipeOutput);
+    }
+    private static void button(RecipeOutput pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
+        buttonBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pRecipeOutput);
     }
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "introductionmod:block/cursed_planks",
+    "side": "introductionmod:block/cursed_planks",
+    "top": "introductionmod:block/cursed_planks"
+  }
+}
