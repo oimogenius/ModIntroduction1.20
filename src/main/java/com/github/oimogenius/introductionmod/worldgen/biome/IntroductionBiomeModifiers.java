@@ -1,7 +1,7 @@
 package com.github.oimogenius.introductionmod.worldgen.biome;
 
 import com.github.oimogenius.introductionmod.IntroductionMod;
-import com.github.oimogenius.introductionmod.worldgen.placement.IntroductionOrePlacement;
+import com.github.oimogenius.introductionmod.worldgen.placement.IntroductionPlacement;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -28,7 +28,7 @@ public class IntroductionBiomeModifiers {
 
         context.register(ADD_ORIHALCON_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
-                HolderSet.direct(placedFeatures.getOrThrow(IntroductionOrePlacement.ORE_ORIHALCON)),
+                HolderSet.direct(placedFeatures.getOrThrow(IntroductionPlacement.ORE_ORIHALCON)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
     }

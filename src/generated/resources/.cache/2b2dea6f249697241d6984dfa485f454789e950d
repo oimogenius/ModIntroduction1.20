@@ -1,9 +1,10 @@
-// 1.20.2	2024-05-04T02:42:05.2893677	Item Models: introductionmod
+// 1.20.2	2024-05-10T16:12:02.4054103	Item Models: introductionmod
 eb2836f7db42e86572deec5b034d5ec3af788ef8 assets/introductionmod/models/item/cursed_button.json
 eed73c8e5ab34f9bba53522da29ed724def5c36a assets/introductionmod/models/item/cursed_door.json
 c2f87c73d2368ad0ac3a876026c420825ae22482 assets/introductionmod/models/item/cursed_fence.json
 1c9e7ba489b0a70dc33de493e3b6c66e12af42f6 assets/introductionmod/models/item/cursed_fence_gate.json
 9c8d632a3a82cb7af3226e4582c8c88e50d41be9 assets/introductionmod/models/item/cursed_pressure_plate.json
+7175d3937b3aa2e9dbabfeb923d8342b41451ad0 assets/introductionmod/models/item/cursed_sapling.json
 2c5ef33bccc3271c4e61dc8ed1ea0eabd6288ff1 assets/introductionmod/models/item/cursed_slab.json
 a5d6952180aeeecba11af1f2963c06895cc4ae51 assets/introductionmod/models/item/cursed_stairs.json
 60c49b1777724964c519985218b01ebf967ba6ad assets/introductionmod/models/item/cursed_trapdoor.json

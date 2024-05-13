@@ -1,4 +1,5 @@
-// 1.20.2	2024-04-21T16:31:52.5752912	Registries
+// 1.20.2	2024-05-12T10:54:49.1260672	Registries
 72fd58fdc63c58e53b2ba4c77610b4b5df3c801b data/introductionmod/forge/biome_modifier/add_orihalcon_ore.json
+f631dce50b9d3159afc99d27f0f264a82bcd5188 data/introductionmod/worldgen/configured_feature/cursed_tree.json
 a316d041f6bad2ba97600caf0f1bd980331968a7 data/introductionmod/worldgen/configured_feature/orihalcon_ore.json
 e9c7438bbf900aa93ffc03f41e22a89a45759d2a data/introductionmod/worldgen/placed_feature/ore_orihalcon.json

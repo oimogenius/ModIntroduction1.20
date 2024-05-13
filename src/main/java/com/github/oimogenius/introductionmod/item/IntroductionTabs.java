@@ -41,6 +41,7 @@ public class IntroductionTabs {
                         pOutput.accept(IntroductionBlocks.CURSED_TRAPDOOR.get());
                         pOutput.accept(IntroductionBlocks.CURSED_BUTTON.get());
                         pOutput.accept(IntroductionBlocks.CURSED_PRESSURE_PLATE.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_SAPLING.get());
                     }))
                     .build());
 

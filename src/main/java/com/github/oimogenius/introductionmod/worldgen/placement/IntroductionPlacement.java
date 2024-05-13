@@ -1,7 +1,7 @@
 package com.github.oimogenius.introductionmod.worldgen.placement;
 
 import com.github.oimogenius.introductionmod.IntroductionMod;
-import com.github.oimogenius.introductionmod.worldgen.features.IntroductionOreFeatures;
+import com.github.oimogenius.introductionmod.worldgen.features.IntroductionFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -14,7 +14,7 @@ import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
-public class IntroductionOrePlacement {
+public class IntroductionPlacement {
     public static final ResourceKey<PlacedFeature> ORE_ORIHALCON =
             createKey("ore_orihalcon");
 
@@ -24,7 +24,7 @@ public class IntroductionOrePlacement {
                 context.lookup(Registries.CONFIGURED_FEATURE);
 
         PlacementUtils.register(context, ORE_ORIHALCON,
-                configuredFeatures.getOrThrow(IntroductionOreFeatures.ORIHALCON_ORE_KEY),
+                configuredFeatures.getOrThrow(IntroductionFeatures.ORIHALCON_ORE_KEY),
                 commonOrePlacement(90,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64),
                                 VerticalAnchor.absolute(112))));

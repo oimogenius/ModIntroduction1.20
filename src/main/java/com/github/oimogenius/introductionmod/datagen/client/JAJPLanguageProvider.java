@@ -40,5 +40,7 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addBlock(IntroductionBlocks.CURSED_TRAPDOOR, "呪われたトラップドア");
         addBlock(IntroductionBlocks.CURSED_BUTTON, "呪われたボタン");
         addBlock(IntroductionBlocks.CURSED_PRESSURE_PLATE, "呪われた感圧板");
+
+        addBlock(IntroductionBlocks.CURSED_SAPLING, "呪われた苗木");
     }
 }

@@ -32,6 +32,8 @@ public class IntroductionItemModelProvider extends ItemModelProvider {
                 IntroductionBlocks.CURSED_PLANKS);
         button(IntroductionBlocks.CURSED_BUTTON,
                 IntroductionBlocks.CURSED_PLANKS);
+
+        sapling(IntroductionBlocks.CURSED_SAPLING);
     }
 
     public void itemWithBlock(RegistryObject<Block> block) {
@@ -56,4 +58,10 @@ public class IntroductionItemModelProvider extends ItemModelProvider {
                 .texture("texture",  new ResourceLocation(IntroductionMod.MOD_ID,
                         "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
+    private void sapling(RegistryObject<Block> block) {
+        this.withExistingParent(block.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(IntroductionMod.MOD_ID,"block/" + block.getId().getPath()));
+    }
+
 }
