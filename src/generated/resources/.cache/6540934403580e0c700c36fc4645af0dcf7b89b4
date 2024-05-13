@@ -1,8 +1,17 @@
-// 1.20.2	2024-04-26T07:01:43.0216445	Tags for minecraft:block mod id introductionmod
+// 1.20.2	2024-05-04T02:42:05.282365	Tags for minecraft:block mod id introductionmod
 55adea698e5d92cfcc9f18cbb02c4d6e267d764f data/forge/tags/blocks/needs_netherite_tool.json
 0f97647beb68887bfc452441bb2203e542d9b1d1 data/introductionmod/tags/blocks/cursed_log.json
+9696092f615cc09fcd23729766bca516df85ba90 data/minecraft/tags/blocks/buttons.json
+f72d8c9a81c2f31b5dda7d1a55cf3f9c445ab815 data/minecraft/tags/blocks/doors.json
+e1db998cec4072188970e723f9aa55c81cfa2944 data/minecraft/tags/blocks/fences.json
+68bf5f058b5579d7d2b8192a4796dbe1134700ee data/minecraft/tags/blocks/fence_gates.json
 09df56cd05d8bdd7925e1ccd823c52e0ae2b4dc2 data/minecraft/tags/blocks/leaves.json
 cb37780773fb4ba837b391ee61287583e03a2b8d data/minecraft/tags/blocks/logs.json
 0f97647beb68887bfc452441bb2203e542d9b1d1 data/minecraft/tags/blocks/logs_that_burn.json
 e74e45c46a0be1b4eff1df1e515d812003d2d605 data/minecraft/tags/blocks/mineable/pickaxe.json
 4679e74107974b00a8f6f8f465b384c80c7e66f7 data/minecraft/tags/blocks/needs_diamond_tool.json
+32da5f8b54d870fc50519d8a3c0ba2fc1e299ff6 data/minecraft/tags/blocks/planks.json
+68384a6be2a583c5f81866000700c5f721c83ed2 data/minecraft/tags/blocks/pressure_plates.json
+e8bfe1bf35c9bb4474ed8872e061260016ff6e34 data/minecraft/tags/blocks/slabs.json
+4389ef4a90c34ffbfe675f873c4d0d193cf74019 data/minecraft/tags/blocks/stairs.json
+37f8d0456e322beb627a3265bdbe20a3d80d2d1d data/minecraft/tags/blocks/trapdoors.json

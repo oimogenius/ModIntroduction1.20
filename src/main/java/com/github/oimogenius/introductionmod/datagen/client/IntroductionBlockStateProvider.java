@@ -5,8 +5,7 @@ import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -38,6 +37,32 @@ public class IntroductionBlockStateProvider extends BlockStateProvider {
         item(IntroductionBlocks.CURSED_WOOD);
         item(IntroductionBlocks.STRIPPED_CURSED_WOOD);
         cursedLeaves(IntroductionBlocks.CURSED_LEAVES);
+
+        simpleBlockWithItem(IntroductionBlocks.CURSED_PLANKS);
+        slabBlock((SlabBlock) IntroductionBlocks.CURSED_SLAB.get(),
+                // 二つ重ねたときのテクスチャ
+                blockTexture(IntroductionBlocks.CURSED_PLANKS.get()),
+                // 単体のテクスチャ
+                blockTexture(IntroductionBlocks.CURSED_PLANKS.get()));
+        stairsBlock((StairBlock) IntroductionBlocks.CURSED_STAIRS.get(),
+                blockTexture(IntroductionBlocks.CURSED_PLANKS.get()));
+        fenceBlock((FenceBlock) IntroductionBlocks.CURSED_FENCE.get(),
+                blockTexture(IntroductionBlocks.CURSED_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) IntroductionBlocks.CURSED_FENCE_GATE.get(),
+                blockTexture(IntroductionBlocks.CURSED_PLANKS.get()));
+        doorBlockWithRenderType((DoorBlock) IntroductionBlocks.CURSED_DOOR.get(),
+                modLoc("block/cursed_door_bottom"),
+                modLoc("block/cursed_door_top"),
+                "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock)
+                        IntroductionBlocks.CURSED_TRAPDOOR.get(),
+                modLoc("block/cursed_trapdoor"), true,
+                "cutout");
+        buttonBlock((ButtonBlock) IntroductionBlocks.CURSED_BUTTON.get(),
+                blockTexture(IntroductionBlocks.CURSED_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock)
+                        IntroductionBlocks.CURSED_PRESSURE_PLATE.get(),
+                blockTexture(IntroductionBlocks.CURSED_PLANKS.get()));
     }
 
     private void simpleBlockWithItem(RegistryObject<Block> block) {

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "introductionmod:block/cursed_slab"
+    },
+    "type=double": {
+      "model": "introductionmod:block/cursed_planks"
+    },
+    "type=top": {
+      "model": "introductionmod:block/cursed_slab_top"
+    }
+  }
+}

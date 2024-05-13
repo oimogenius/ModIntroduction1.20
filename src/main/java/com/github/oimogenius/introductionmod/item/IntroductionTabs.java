@@ -31,6 +31,16 @@ public class IntroductionTabs {
                         pOutput.accept(IntroductionBlocks.CURSED_WOOD.get());
                         pOutput.accept(IntroductionBlocks.STRIPPED_CURSED_WOOD.get());
                         pOutput.accept(IntroductionBlocks.CURSED_LEAVES.get());
+
+                        pOutput.accept(IntroductionBlocks.CURSED_PLANKS.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_SLAB.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_STAIRS.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_FENCE.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_FENCE_GATE.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_DOOR.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_TRAPDOOR.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_BUTTON.get());
+                        pOutput.accept(IntroductionBlocks.CURSED_PRESSURE_PLATE.get());
                     }))
                     .build());
 

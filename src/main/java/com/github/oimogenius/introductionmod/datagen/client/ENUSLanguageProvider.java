@@ -29,5 +29,15 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addBlock(IntroductionBlocks.CURSED_WOOD, "Cursed Wood");
         addBlock(IntroductionBlocks.STRIPPED_CURSED_WOOD, "Stripped Cursed Wood");
         addBlock(IntroductionBlocks.CURSED_LEAVES, "Cursed Leaves");
+
+        addBlock(IntroductionBlocks.CURSED_PLANKS, "Cursed Planks");
+        addBlock(IntroductionBlocks.CURSED_SLAB, "Cursed Slab");
+        addBlock(IntroductionBlocks.CURSED_STAIRS, "Cursed Stairs");
+        addBlock(IntroductionBlocks.CURSED_FENCE, "Cursed Fence");
+        addBlock(IntroductionBlocks.CURSED_FENCE_GATE, "Cursed Fence Gate");
+        addBlock(IntroductionBlocks.CURSED_DOOR, "Cursed Door");
+        addBlock(IntroductionBlocks.CURSED_TRAPDOOR, "Cursed Trapdoor");
+        addBlock(IntroductionBlocks.CURSED_BUTTON, "Cursed Button");
+        addBlock(IntroductionBlocks.CURSED_PRESSURE_PLATE, "Cursed Pressure Plate");
     }
 }

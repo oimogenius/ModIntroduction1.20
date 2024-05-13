@@ -5,14 +5,13 @@ import com.github.oimogenius.introductionmod.block.custom.IntroductionLeavesBloc
 import com.github.oimogenius.introductionmod.block.custom.IntroductionLogBlock;
 import com.github.oimogenius.introductionmod.block.custom.IntroductionStrippableLogBlock;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -59,6 +58,49 @@ public class IntroductionBlocks {
             "cursed_leaves",
             () -> new IntroductionLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
 
+    // 板材
+    public static final RegistryObject<Block> CURSED_PLANKS = registerBlockItem(
+            "cursed_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    // ハーフブロック
+    public static final RegistryObject<Block> CURSED_SLAB = registerBlockItem(
+            "cursed_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    // 階段
+    public static final RegistryObject<Block> CURSED_STAIRS = registerBlockItem(
+            "cursed_stairs",
+            () -> new StairBlock(() -> IntroductionBlocks.CURSED_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    // フェンス
+    public static final RegistryObject<Block> CURSED_FENCE = registerBlockItem(
+            "cursed_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    // フェンスゲート
+    public static final RegistryObject<Block> CURSED_FENCE_GATE = registerBlockItem(
+            "cursed_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
+                    SoundEvents.BONE_BLOCK_PLACE, SoundEvents.SHEEP_DEATH));
+    // ドア
+    public static final RegistryObject<Block> CURSED_DOOR = registerBlockItem(
+            "cursed_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
+                    BlockSetType.OAK));
+    // トラップドア
+    public static final RegistryObject<Block> CURSED_TRAPDOOR = registerBlockItem(
+            "cursed_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).noOcclusion(),
+                    BlockSetType.IRON));
+    // ボタン
+    public static final RegistryObject<Block> CURSED_BUTTON = registerBlockItem(
+            "cursed_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
+                    BlockSetType.OAK, 30, true));
+    // 感圧板
+    public static final RegistryObject<Block> CURSED_PRESSURE_PLATE = registerBlockItem(
+            "cursed_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
+                    BlockSetType.OAK));
 
     /* ブロックアイテム作成用メソッド */
     private static <T extends Block> RegistryObject<T> registerBlockItem(String name,

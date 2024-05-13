@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "introductionmod:block/cursed_planks"
+  }
+}

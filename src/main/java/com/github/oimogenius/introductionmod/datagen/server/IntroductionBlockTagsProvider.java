@@ -54,5 +54,18 @@ public class IntroductionBlockTagsProvider extends BlockTagsProvider {
         // 地面かどうかの判定に使われたり、ハサミで回収できるようになったりする
         this.tag(BlockTags.LEAVES)
                 .add(IntroductionBlocks.CURSED_LEAVES.get());
+
+        this.tag(BlockTags.PLANKS).add(IntroductionBlocks.CURSED_PLANKS.get());
+        this.tag(BlockTags.SLABS).add(IntroductionBlocks.CURSED_SLAB.get());
+        this.tag(BlockTags.STAIRS).add(IntroductionBlocks.CURSED_STAIRS.get());
+        this.tag(BlockTags.FENCES).add(IntroductionBlocks.CURSED_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES).add(IntroductionBlocks.CURSED_FENCE_GATE.get());
+        this.tag(BlockTags.DOORS).add(IntroductionBlocks.CURSED_DOOR.get());
+        this.tag(BlockTags.TRAPDOORS).add(IntroductionBlocks.CURSED_TRAPDOOR.get());
+        this.tag(BlockTags.BUTTONS).add(IntroductionBlocks.CURSED_BUTTON.get());
+        this.tag(BlockTags.PRESSURE_PLATES).add(IntroductionBlocks.CURSED_PRESSURE_PLATE.get());
+
+
+
     }
 }
