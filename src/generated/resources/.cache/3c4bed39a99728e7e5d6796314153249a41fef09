@@ -1,4 +1,4 @@
-// 1.20.2	2024-05-04T03:47:54.8796092	Block States: introductionmod
+// 1.20.2	2024-05-10T16:12:02.4124101	Block States: introductionmod
 e2f78538d223b290ae20ad57a7d990bd7d9f611d assets/introductionmod/blockstates/cursed_button.json
 e31e997be73d75d37b4a641b9d4347f534dcc820 assets/introductionmod/blockstates/cursed_door.json
 bb3531e13b1bd81b535bb08f82a7661efb8d61ae assets/introductionmod/blockstates/cursed_fence.json
@@ -7,6 +7,7 @@ bf58901d706fed9dd008c81e95c0afd5360c54c1 assets/introductionmod/blockstates/curs
 2797ed2283aadb205c10e92e72b140ef457563ad assets/introductionmod/blockstates/cursed_log.json
 f8db8d19a7381ea9faa1f25c6c0d2827010de8bf assets/introductionmod/blockstates/cursed_planks.json
 80b588a1f379d22d9e6e7904346a50b5dbc742a4 assets/introductionmod/blockstates/cursed_pressure_plate.json
+381e9e7643c1c332b8c051aaa9adac787eb5b71e assets/introductionmod/blockstates/cursed_sapling.json
 d0adfb0c6b63959a4649f3f65d44e1f46dcf0bbd assets/introductionmod/blockstates/cursed_slab.json
 f08555b9f67106c4a981c303c492da3aaecd5518 assets/introductionmod/blockstates/cursed_stairs.json
 40fcf1fbef6a64a2e3bd2639ec8f129d05ac8413 assets/introductionmod/blockstates/cursed_trapdoor.json
@@ -39,6 +40,7 @@ deb19dcc6c4847f1b92246f3ae590ca99b586ae4 assets/introductionmod/models/block/cur
 592cde0915a7cdfa344b966be136d8f97f1c9bd9 assets/introductionmod/models/block/cursed_planks.json
 45c0a10e5b4cc17631cd60d0695c6a245ea4cc7b assets/introductionmod/models/block/cursed_pressure_plate.json
 0afde3e9e0d22366ee77e410891d5f1308df59dc assets/introductionmod/models/block/cursed_pressure_plate_down.json
+f0d76ea958b38f48445ba78a482d6aa14e0b38d1 assets/introductionmod/models/block/cursed_sapling.json
 56445ba08b5ecc92d8f396e6cfae3724bd9822a6 assets/introductionmod/models/block/cursed_slab.json
 ad167dd4058fc16ded4195e71e9ac06cd1eda174 assets/introductionmod/models/block/cursed_slab_top.json
 4a48e1d32062cfdeb357ec3f6ab3ceea1f9b84a7 assets/introductionmod/models/block/cursed_stairs.json

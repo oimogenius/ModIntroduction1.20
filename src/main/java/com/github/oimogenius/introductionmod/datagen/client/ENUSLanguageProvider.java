@@ -39,5 +39,7 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addBlock(IntroductionBlocks.CURSED_TRAPDOOR, "Cursed Trapdoor");
         addBlock(IntroductionBlocks.CURSED_BUTTON, "Cursed Button");
         addBlock(IntroductionBlocks.CURSED_PRESSURE_PLATE, "Cursed Pressure Plate");
+
+        addBlock(IntroductionBlocks.CURSED_SAPLING, "Cursed Sapling");
     }
 }

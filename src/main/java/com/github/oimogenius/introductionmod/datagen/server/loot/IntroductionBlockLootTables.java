@@ -26,9 +26,8 @@ public class IntroductionBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(IntroductionBlocks.STRIPPED_CURSED_LOG.get());
         this.dropSelf(IntroductionBlocks.CURSED_WOOD.get());
         this.dropSelf(IntroductionBlocks.STRIPPED_CURSED_WOOD.get());
-        // TODO:呪われた苗木に変更
         this.add(IntroductionBlocks.CURSED_LEAVES.get(), block ->
-                createLeavesDrops(block, IntroductionBlocks.ORIHALCON_BLOCK.get(),
+                createLeavesDrops(block, IntroductionBlocks.CURSED_SAPLING.get(),
                         NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(IntroductionBlocks.CURSED_PLANKS.get());
@@ -42,6 +41,8 @@ public class IntroductionBlockLootTables extends BlockLootSubProvider {
                 createSlabItemTable(IntroductionBlocks.CURSED_SLAB.get()));
         this.add(IntroductionBlocks.CURSED_DOOR.get(),
                 createDoorTable(IntroductionBlocks.CURSED_DOOR.get()));
+
+        this.dropSelf(IntroductionBlocks.CURSED_SAPLING.get());
     }
 
     @Override

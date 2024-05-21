@@ -5,6 +5,7 @@ import com.github.oimogenius.introductionmod.block.custom.IntroductionLeavesBloc
 import com.github.oimogenius.introductionmod.block.custom.IntroductionLogBlock;
 import com.github.oimogenius.introductionmod.block.custom.IntroductionStrippableLogBlock;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
+import com.github.oimogenius.introductionmod.worldgen.tree.CursedTreeGrower;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -101,6 +102,12 @@ public class IntroductionBlocks {
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
                     BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS),
                     BlockSetType.OAK));
+    // 苗木
+    public static final RegistryObject<Block> CURSED_SAPLING = registerBlockItem(
+            "cursed_sapling",
+            () -> new SaplingBlock(new CursedTreeGrower(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
 
     /* ブロックアイテム作成用メソッド */
     private static <T extends Block> RegistryObject<T> registerBlockItem(String name,

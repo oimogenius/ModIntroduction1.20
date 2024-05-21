@@ -63,6 +63,8 @@ public class IntroductionBlockStateProvider extends BlockStateProvider {
         pressurePlateBlock((PressurePlateBlock)
                         IntroductionBlocks.CURSED_PRESSURE_PLATE.get(),
                 blockTexture(IntroductionBlocks.CURSED_PLANKS.get()));
+
+        sapling(IntroductionBlocks.CURSED_SAPLING);
     }
 
     private void simpleBlockWithItem(RegistryObject<Block> block) {
@@ -91,5 +93,11 @@ public class IntroductionBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(block.get(), models().singleTexture(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 new ResourceLocation("minecraft:block/leaves"),
                 "all", blockTexture(block.get())).renderType("cutout"));
+    }
+
+    private void sapling(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(),
+                models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(),
+                        blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 }
