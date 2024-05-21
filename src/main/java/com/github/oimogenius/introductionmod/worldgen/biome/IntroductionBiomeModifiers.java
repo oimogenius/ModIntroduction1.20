@@ -12,6 +12,7 @@ import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.world.BiomeModifier;
 import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -19,17 +20,25 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class IntroductionBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_ORIHALCON_ORE =
             createKey("add_orihalcon_ore");
+    public static final ResourceKey<BiomeModifier> ADD_CURSED_TREE =
+            createKey("add_cursed_tree");
 
     public static void bootstrap(BootstapContext<BiomeModifier> context) {
-        // 鉱石が生成されるバイオームを設定
         HolderGetter<PlacedFeature> placedFeatures =
                 context.lookup(Registries.PLACED_FEATURE);
         HolderGetter<Biome> biomes = context.lookup(Registries.BIOME);
 
+        // 鉱石が生成されるバイオームを設定
         context.register(ADD_ORIHALCON_ORE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_OVERWORLD),
                 HolderSet.direct(placedFeatures.getOrThrow(IntroductionPlacement.ORE_ORIHALCON)),
                 GenerationStep.Decoration.UNDERGROUND_ORES
+        ));
+        // 木が生成されるバイオームを設定
+        context.register(ADD_CURSED_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+                HolderSet.direct(placedFeatures.getOrThrow(IntroductionPlacement.CURSED_TREE)),
+                GenerationStep.Decoration.VEGETAL_DECORATION
         ));
     }
 

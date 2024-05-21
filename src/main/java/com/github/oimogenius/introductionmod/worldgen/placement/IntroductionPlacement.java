@@ -1,11 +1,13 @@
 package com.github.oimogenius.introductionmod.worldgen.placement;
 
 import com.github.oimogenius.introductionmod.IntroductionMod;
+import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
 import com.github.oimogenius.introductionmod.worldgen.features.IntroductionFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -17,17 +19,25 @@ import java.util.List;
 public class IntroductionPlacement {
     public static final ResourceKey<PlacedFeature> ORE_ORIHALCON =
             createKey("ore_orihalcon");
+    public static final ResourceKey<PlacedFeature> CURSED_TREE =
+            createKey("cursed_tree");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
-        // 鉱石の配置情報を設定
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures =
                 context.lookup(Registries.CONFIGURED_FEATURE);
 
+        // 鉱石の配置情報を設定
         PlacementUtils.register(context, ORE_ORIHALCON,
                 configuredFeatures.getOrThrow(IntroductionFeatures.ORIHALCON_ORE_KEY),
                 commonOrePlacement(90,
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-64),
                                 VerticalAnchor.absolute(112))));
+        // 木の配置情報を設定
+        PlacementUtils.register(context, CURSED_TREE,
+                configuredFeatures.getOrThrow(IntroductionFeatures.CURSED_TREE_KEY),
+                VegetationPlacements.treePlacement(
+                        PlacementUtils.countExtra(10, 0.1f, 1),
+                        IntroductionBlocks.CURSED_SAPLING.get()));
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {
