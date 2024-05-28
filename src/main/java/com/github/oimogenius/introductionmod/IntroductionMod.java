@@ -1,10 +1,13 @@
 package com.github.oimogenius.introductionmod;
 
 import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
+import com.github.oimogenius.introductionmod.entity.IntroductionEntities;
+import com.github.oimogenius.introductionmod.entity.renderer.SheepSlimeRenderer;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
 import com.github.oimogenius.introductionmod.item.IntroductionTabs;
 import com.github.oimogenius.introductionmod.loot.IntroductionLootModifiers;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,6 +39,8 @@ public class IntroductionMod {
         IntroductionBlocks.register(modEventBus);
         // GlobalLootModifierレジストリをイベントバスに登録
         IntroductionLootModifiers.register(modEventBus);
+        // エンティティレジストリをイベントバスに登録
+        IntroductionEntities.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -62,6 +67,8 @@ public class IntroductionMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(IntroductionEntities.SHEEP_SLIME.get(),
+                    SheepSlimeRenderer::new);
         }
     }
 }

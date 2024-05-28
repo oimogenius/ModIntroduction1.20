@@ -2,6 +2,7 @@ package com.github.oimogenius.introductionmod.datagen.client;
 
 import com.github.oimogenius.introductionmod.IntroductionMod;
 import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
+import com.github.oimogenius.introductionmod.entity.IntroductionEntities;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -41,5 +42,7 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addBlock(IntroductionBlocks.CURSED_PRESSURE_PLATE, "Cursed Pressure Plate");
 
         addBlock(IntroductionBlocks.CURSED_SAPLING, "Cursed Sapling");
+
+        addEntityType(IntroductionEntities.SHEEP_SLIME, "Sheep Slime");
     }
 }
