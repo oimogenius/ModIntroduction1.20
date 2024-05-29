@@ -1,6 +1,7 @@
 package com.github.oimogenius.introductionmod;
 
 import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
+import com.github.oimogenius.introductionmod.entity.IntroductionEntities;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
 import com.github.oimogenius.introductionmod.item.IntroductionTabs;
 import com.github.oimogenius.introductionmod.loot.IntroductionLootModifiers;
@@ -36,6 +37,8 @@ public class IntroductionMod {
         IntroductionBlocks.register(modEventBus);
         // GlobalLootModifierレジストリをイベントバスに登録
         IntroductionLootModifiers.register(modEventBus);
+        // エンティティレジストリをイベントバスに登録
+        IntroductionEntities.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
 
