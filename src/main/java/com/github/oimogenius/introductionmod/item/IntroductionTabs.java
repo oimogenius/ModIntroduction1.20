@@ -42,6 +42,8 @@ public class IntroductionTabs {
                         pOutput.accept(IntroductionBlocks.CURSED_BUTTON.get());
                         pOutput.accept(IntroductionBlocks.CURSED_PRESSURE_PLATE.get());
                         pOutput.accept(IntroductionBlocks.CURSED_SAPLING.get());
+
+                        pOutput.accept(IntroductionItems.SHEEP_SLIME_SPAWN_EGG.get());
                     }))
                     .build());
 

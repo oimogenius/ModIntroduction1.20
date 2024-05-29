@@ -44,5 +44,6 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addBlock(IntroductionBlocks.CURSED_SAPLING, "Cursed Sapling");
 
         addEntityType(IntroductionEntities.SHEEP_SLIME, "Sheep Slime");
+        addItem(IntroductionItems.SHEEP_SLIME_SPAWN_EGG, "Sheep Slime Spawn Egg");
     }
 }

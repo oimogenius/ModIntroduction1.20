@@ -1,4 +1,4 @@
-// 1.20.2	2024-05-10T16:12:02.4054103	Item Models: introductionmod
+// 1.20.2	2024-05-25T07:11:20.1735541	Item Models: introductionmod
 eb2836f7db42e86572deec5b034d5ec3af788ef8 assets/introductionmod/models/item/cursed_button.json
 eed73c8e5ab34f9bba53522da29ed724def5c36a assets/introductionmod/models/item/cursed_door.json
 c2f87c73d2368ad0ac3a876026c420825ae22482 assets/introductionmod/models/item/cursed_fence.json
@@ -10,3 +10,4 @@ a5d6952180aeeecba11af1f2963c06895cc4ae51 assets/introductionmod/models/item/curs
 60c49b1777724964c519985218b01ebf967ba6ad assets/introductionmod/models/item/cursed_trapdoor.json
 1cb17970be3a7c7c01141776c8151913d16e04cf assets/introductionmod/models/item/orihalcon_ingot.json
 98c69b4f453888e2388c9600b5edd2cee4f5a541 assets/introductionmod/models/item/raw_orihalcon.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/introductionmod/models/item/sheep_slime_spawn_egg.json

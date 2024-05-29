@@ -12,6 +12,9 @@ public class IntroductionLootTables {
         return new LootTableProvider(output, Set.of(), List.of(
                 new LootTableProvider.SubProviderEntry(
                         IntroductionBlockLootTables::new, LootContextParamSets.BLOCK
+                ),
+                new LootTableProvider.SubProviderEntry(
+                        CustomEntityLootProvider::new, LootContextParamSets.ENTITY
                 )
         ));
     }
