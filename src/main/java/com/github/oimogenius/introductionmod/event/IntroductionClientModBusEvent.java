@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 @Mod.EventBusSubscriber(modid = IntroductionMod.MOD_ID,
     bus = Mod.EventBusSubscriber.Bus.MOD,
     value = Dist.CLIENT)
-public class IntroductionEventBusClientEvent {
+public class IntroductionClientModBusEvent {
     @SubscribeEvent
     public static void registerLayerDefinitions(
             EntityRenderersEvent.RegisterLayerDefinitions event) {
