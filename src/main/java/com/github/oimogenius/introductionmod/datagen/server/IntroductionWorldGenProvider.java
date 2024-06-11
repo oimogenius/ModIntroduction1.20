@@ -2,6 +2,7 @@ package com.github.oimogenius.introductionmod.datagen.server;
 
 import com.github.oimogenius.introductionmod.IntroductionMod;
 import com.github.oimogenius.introductionmod.worldgen.biome.IntroductionBiomeModifiers;
+import com.github.oimogenius.introductionmod.worldgen.biome.IntroductionBiomes;
 import com.github.oimogenius.introductionmod.worldgen.features.IntroductionFeatures;
 import com.github.oimogenius.introductionmod.worldgen.placement.IntroductionPlacement;
 import net.minecraft.core.HolderLookup;
@@ -18,7 +19,8 @@ public class IntroductionWorldGenProvider extends DatapackBuiltinEntriesProvider
     private static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, IntroductionFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, IntroductionPlacement::bootstrap)
-            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, IntroductionBiomeModifiers::bootstrap);
+            .add(ForgeRegistries.Keys.BIOME_MODIFIERS, IntroductionBiomeModifiers::bootstrap)
+            .add(Registries.BIOME, IntroductionBiomes::bootstrap);
 
     public IntroductionWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(IntroductionMod.MOD_ID));
