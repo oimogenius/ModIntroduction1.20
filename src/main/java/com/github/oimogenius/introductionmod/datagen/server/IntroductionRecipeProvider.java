@@ -12,6 +12,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class IntroductionRecipeProvider extends RecipeProvider {
     // オリハルコンインゴットを生成できるアイテムのリスト
@@ -25,7 +26,7 @@ public class IntroductionRecipeProvider extends RecipeProvider {
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput pRecipeOutput) {
+    protected void buildRecipes(Consumer<FinishedRecipe> pRecipeOutput) {
         nineBlockStorageRecipes(pRecipeOutput, RecipeCategory.MISC,
                 IntroductionItems.ORIHALCON_INGOT.get(),
                 RecipeCategory.BUILDING_BLOCKS,
@@ -77,16 +78,17 @@ public class IntroductionRecipeProvider extends RecipeProvider {
     }
 
     // かまど用のレシピ
-    protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+    protected static void oreSmelting(Consumer<FinishedRecipe> pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
         oreCooking(pRecipeOutput, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_smelting");
     }
 
     // 溶鉱炉用のレシピ
-    protected static void oreBlasting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+    protected static void oreBlasting(Consumer<FinishedRecipe> pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
         oreCooking(pRecipeOutput, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
     }
 
-    private static void oreCooking(RecipeOutput pRecipeOutput, RecipeSerializer<? extends AbstractCookingRecipe> pSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pSuffix) {
+    protected static void oreCooking(Consumer<FinishedRecipe> pRecipeOutput, RecipeSerializer<?
+            extends AbstractCookingRecipe> pSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pSuffix) {
         for(ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult, pExperience, pCookingTime, pSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pRecipeOutput,
@@ -94,7 +96,7 @@ public class IntroductionRecipeProvider extends RecipeProvider {
         }
     }
 
-    protected static void nineBlockStorageRecipes(RecipeOutput pRecipeOutput,
+    protected static void nineBlockStorageRecipes(Consumer<FinishedRecipe> pRecipeOutput,
                                                   RecipeCategory pUnpackedCategory,
                                                   ItemLike pUnpacked,
                                                   RecipeCategory pPackedCategory,
@@ -106,34 +108,34 @@ public class IntroductionRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(pUnpacked), has(pUnpacked)).save(pRecipeOutput);
     }
 
-    private static void stairs(RecipeOutput pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
+    private static void stairs(Consumer<FinishedRecipe> pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
         stairBuilder(pResult, Ingredient.of(pIngredient))
                 .unlockedBy(getHasName(pIngredient), has(pIngredient))
                 .save(pRecipeOutput);
     }
-    private static void fence(RecipeOutput pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
+    private static void fence(Consumer<FinishedRecipe> pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
         fenceBuilder(pResult, Ingredient.of(pIngredient))
                 .unlockedBy(getHasName(pIngredient), has(pIngredient))
                 .save(pRecipeOutput);
     }
-    private static void fenceGate(RecipeOutput pRecipeOutput, ItemLike pResult,
+    private static void fenceGate(Consumer<FinishedRecipe> pRecipeOutput, ItemLike pResult,
                                   ItemLike pIngredient) {
         fenceGateBuilder(pResult, Ingredient.of(pIngredient))
                 .unlockedBy(getHasName(pIngredient), has(pIngredient))
                 .save(pRecipeOutput);
     }
-    private static void door(RecipeOutput pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
+    private static void door(Consumer<FinishedRecipe> pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
         doorBuilder(pResult, Ingredient.of(pIngredient))
                 .unlockedBy(getHasName(pIngredient), has(pIngredient))
                 .save(pRecipeOutput);
     }
-    private static void trapdoor(RecipeOutput pRecipeOutput, ItemLike pResult,
+    private static void trapdoor(Consumer<FinishedRecipe> pRecipeOutput, ItemLike pResult,
                                  ItemLike pIngredient) {
         trapdoorBuilder(pResult, Ingredient.of(pIngredient))
                 .unlockedBy(getHasName(pIngredient), has(pIngredient))
                 .save(pRecipeOutput);
     }
-    private static void button(RecipeOutput pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
+    private static void button(Consumer<FinishedRecipe> pRecipeOutput, ItemLike pResult, ItemLike pIngredient) {
         buttonBuilder(pResult, Ingredient.of(pIngredient))
                 .unlockedBy(getHasName(pIngredient), has(pIngredient))
                 .save(pRecipeOutput);

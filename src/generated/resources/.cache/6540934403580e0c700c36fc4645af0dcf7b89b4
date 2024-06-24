@@ -1,4 +1,4 @@
-// 1.20.2	2024-05-04T02:42:05.282365	Tags for minecraft:block mod id introductionmod
+// 1.20.1	2024-06-24T02:04:12.0779384	Tags for minecraft:block mod id introductionmod
 55adea698e5d92cfcc9f18cbb02c4d6e267d764f data/forge/tags/blocks/needs_netherite_tool.json
 0f97647beb68887bfc452441bb2203e542d9b1d1 data/introductionmod/tags/blocks/cursed_log.json
 9696092f615cc09fcd23729766bca516df85ba90 data/minecraft/tags/blocks/buttons.json
