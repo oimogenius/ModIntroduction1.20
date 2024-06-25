@@ -30,6 +30,5 @@
     "recipes": [
       "introductionmod:cursed_wood"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

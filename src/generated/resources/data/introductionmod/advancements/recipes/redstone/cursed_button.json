@@ -30,6 +30,5 @@
     "recipes": [
       "introductionmod:cursed_button"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

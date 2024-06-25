@@ -1,4 +1,4 @@
-// 1.20.2	2024-03-31T04:43:37.0251918	Global Loot Modifiers : introductionmod
+// 1.20.4	2024-06-24T06:42:09.6441723	Global Loot Modifiers : introductionmod
 ea2f4cfa5b517919332615a57698fe28f0067688 data/forge/loot_modifiers/global_loot_modifiers.json
 07d590744300928821beabd02dd67a52bf81bd4a data/introductionmod/loot_modifiers/orihalcon_ingot_from_ruined_portal.json
 c0df5907e3bf3fd3fd2064fca05a8f81dbed6047 data/introductionmod/loot_modifiers/orihalcon_ingot_from_sniffer_digging.json

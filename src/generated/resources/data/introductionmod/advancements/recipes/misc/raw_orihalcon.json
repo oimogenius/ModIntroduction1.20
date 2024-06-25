@@ -30,6 +30,5 @@
     "recipes": [
       "introductionmod:raw_orihalcon"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

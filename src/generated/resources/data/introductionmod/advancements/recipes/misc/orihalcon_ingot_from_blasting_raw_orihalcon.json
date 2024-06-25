@@ -30,6 +30,5 @@
     "recipes": [
       "introductionmod:orihalcon_ingot_from_blasting_raw_orihalcon"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

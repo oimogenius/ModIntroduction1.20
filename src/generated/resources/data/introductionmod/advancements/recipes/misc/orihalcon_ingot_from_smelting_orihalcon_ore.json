@@ -30,6 +30,5 @@
     "recipes": [
       "introductionmod:orihalcon_ingot_from_smelting_orihalcon_ore"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
