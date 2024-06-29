@@ -6,7 +6,7 @@ import com.github.oimogenius.introductionmod.worldgen.placement.IntroductionPlac
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.Musics;
@@ -20,7 +20,7 @@ public class IntroductionBiomes {
             ResourceKey.create(Registries.BIOME, new ResourceLocation(
                     IntroductionMod.MOD_ID, "cursed_forest"));
 
-    public static void bootstrap(BootstapContext<Biome> context) {
+    public static void bootstrap(BootstrapContext<Biome> context) {
         context.register(CURSED_FOREST, cursedForest(context));
     }
 
@@ -34,7 +34,7 @@ public class IntroductionBiomes {
         BiomeDefaultFeatures.addSurfaceFreezing(builder);
     }
 
-    private static Biome cursedForest(BootstapContext<Biome> context) {
+    private static Biome cursedForest(BootstrapContext<Biome> context) {
         // モブのスポーンの設定
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
         spawnBuilder.addSpawn(MobCategory.MONSTER,

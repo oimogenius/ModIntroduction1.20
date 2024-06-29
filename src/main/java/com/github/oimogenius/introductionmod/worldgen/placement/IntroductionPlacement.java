@@ -5,7 +5,7 @@ import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
 import com.github.oimogenius.introductionmod.worldgen.features.IntroductionFeatures;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.ResourceKey;
@@ -22,7 +22,7 @@ public class IntroductionPlacement {
     public static final ResourceKey<PlacedFeature> CURSED_TREE =
             createKey("cursed_tree");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures =
                 context.lookup(Registries.CONFIGURED_FEATURE);
 

@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.Set;
 
 public class IntroductionBlockLootTables extends BlockLootSubProvider {
-    protected IntroductionBlockLootTables() {
+    public IntroductionBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
 

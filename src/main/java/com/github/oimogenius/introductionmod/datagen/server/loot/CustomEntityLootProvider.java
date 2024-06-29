@@ -23,7 +23,7 @@ import java.util.stream.Stream;
 import static net.minecraft.world.level.storage.loot.LootPool.lootPool;
 
 public class CustomEntityLootProvider extends EntityLootSubProvider {
-    protected CustomEntityLootProvider() {
+    public CustomEntityLootProvider() {
         super(FeatureFlags.REGISTRY.allFlags());
     }
 

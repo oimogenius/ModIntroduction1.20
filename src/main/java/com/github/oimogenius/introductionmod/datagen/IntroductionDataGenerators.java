@@ -38,9 +38,11 @@ public class IntroductionDataGenerators {
         generator.addProvider(event.includeClient(), new JAJPLanguageProvider(packOutput));
 
         // レシピ
-        generator.addProvider(event.includeServer(), new IntroductionRecipeProvider(packOutput));
+        generator.addProvider(event.includeServer(),
+                new IntroductionRecipeProvider(packOutput, lookUpProvider));
         // ルートテーブル
-        generator.addProvider(event.includeServer(), IntroductionLootTables.create(packOutput));
+        generator.addProvider(event.includeServer(),
+                IntroductionLootTables.create(packOutput, lookUpProvider));
         // ブロックタグ
         var blockTagsProvider = generator.addProvider(event.includeServer(),
                 new IntroductionBlockTagsProvider(packOutput
@@ -50,7 +52,7 @@ public class IntroductionDataGenerators {
                 packOutput, lookUpProvider, blockTagsProvider.contentsGetter(),existingFileHelper));
         // GlobalLootModifier
         generator.addProvider(event.includeServer(),
-                new IntroductionGlobalLootModifierProvider(packOutput));
+                new IntroductionGlobalLootModifierProvider(packOutput, lookUpProvider));
         // WorldGen
         generator.addProvider(event.includeServer(),
                 new IntroductionWorldGenProvider(packOutput, lookUpProvider));

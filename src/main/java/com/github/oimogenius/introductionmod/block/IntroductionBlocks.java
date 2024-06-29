@@ -81,8 +81,9 @@ public class IntroductionBlocks {
     // フェンスゲート
     public static final RegistryObject<Block> CURSED_FENCE_GATE = registerBlockItem(
             "cursed_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS),
-                    SoundEvents.BONE_BLOCK_PLACE, SoundEvents.SHEEP_DEATH, WoodType.OAK));
+            () -> new FenceGateBlock(WoodType.OAK,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS),
+                    SoundEvents.BONE_BLOCK_PLACE, SoundEvents.SHEEP_DEATH));
     // ドア
     public static final RegistryObject<Block> CURSED_DOOR = registerBlockItem(
             "cursed_door",

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "introductionmod:cursed_log"
-            ]
+            "items": "introductionmod:cursed_log"
           }
         ]
       },

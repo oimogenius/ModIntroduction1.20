@@ -4,6 +4,7 @@ import com.github.oimogenius.introductionmod.IntroductionMod;
 import com.github.oimogenius.introductionmod.block.IntroductionBlocks;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
 import com.github.oimogenius.introductionmod.tag.IntroductionTags;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.*;
@@ -11,6 +12,7 @@ import net.minecraft.world.level.ItemLike;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public class IntroductionRecipeProvider extends RecipeProvider {
     // オリハルコンインゴットを生成できるアイテムのリスト
@@ -19,8 +21,8 @@ public class IntroductionRecipeProvider extends RecipeProvider {
                     IntroductionBlocks.ORIHALCON_ORE.get(),
                     IntroductionBlocks.DEEPSLATE_ORIHALCON_ORE.get());
 
-    public IntroductionRecipeProvider(PackOutput pOutput) {
-        super(pOutput);
+    public IntroductionRecipeProvider(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> lookUpProvider) {
+        super(pOutput, lookUpProvider);
     }
 
     @Override

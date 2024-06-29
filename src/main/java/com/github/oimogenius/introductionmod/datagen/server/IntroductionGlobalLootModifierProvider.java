@@ -4,6 +4,7 @@ import com.github.oimogenius.introductionmod.IntroductionMod;
 import com.github.oimogenius.introductionmod.item.IntroductionItems;
 import com.github.oimogenius.introductionmod.loot.AddItemModifier;
 import com.github.oimogenius.introductionmod.loot.ReplaceItemModifier;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
@@ -11,9 +12,11 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCon
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 
+import java.util.concurrent.CompletableFuture;
+
 public class IntroductionGlobalLootModifierProvider extends GlobalLootModifierProvider {
-    public IntroductionGlobalLootModifierProvider(PackOutput output) {
-        super(output, IntroductionMod.MOD_ID);
+    public IntroductionGlobalLootModifierProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookUpProvider) {
+        super(output, IntroductionMod.MOD_ID, lookUpProvider);
     }
 
     @Override

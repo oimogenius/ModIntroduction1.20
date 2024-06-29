@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "introductionmod:raw_orihalcon_block"
-            ]
+            "items": "introductionmod:raw_orihalcon_block"
           }
         ]
       },

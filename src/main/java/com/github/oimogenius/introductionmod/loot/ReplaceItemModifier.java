@@ -2,6 +2,7 @@ package com.github.oimogenius.introductionmod.loot;
 
 import com.google.common.base.Suppliers;
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.world.item.Item;
@@ -17,8 +18,8 @@ import java.util.function.Supplier;
 
 public class ReplaceItemModifier extends LootModifier {
     // CODEC：Java <-> JSONへの変換をするための機能
-    public static final Supplier<Codec<ReplaceItemModifier>> CODEC = Suppliers.memoize(()
-            -> RecordCodecBuilder.create(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
+    public static final Supplier<MapCodec<ReplaceItemModifier>> CODEC = Suppliers.memoize(()
+            -> RecordCodecBuilder.mapCodec(inst -> codecStart(inst).and(ForgeRegistries.ITEMS.getCodec()
             .fieldOf("item").forGetter(m -> m.item))
             .and(Codec.FLOAT.fieldOf("chance").forGetter(m -> m.chance))
             .apply(inst, ReplaceItemModifier::new)));
@@ -52,7 +53,7 @@ public class ReplaceItemModifier extends LootModifier {
     }
 
     @Override
-    public Codec<? extends IGlobalLootModifier> codec() {
+    public MapCodec<? extends IGlobalLootModifier> codec() {
         return CODEC.get();
     }
 }
