@@ -8,7 +8,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = IntroductionMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class IntroductionEventBusEvent {
+public class IntroductionModBusEvent {
     @SubscribeEvent
     public static void registerAttributes(
             EntityAttributeCreationEvent event) {

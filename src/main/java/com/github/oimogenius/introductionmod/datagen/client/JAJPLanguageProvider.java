@@ -45,5 +45,6 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addBlock(IntroductionBlocks.CURSED_SAPLING, "呪われた苗木");
 
         addEntityType(IntroductionEntities.SHEEP_SLIME, "ヒツジスライム");
+        addItem(IntroductionItems.SHEEP_SLIME_SPAWN_EGG, "ヒツジスライムのスポーンエッグ");
     }
 }

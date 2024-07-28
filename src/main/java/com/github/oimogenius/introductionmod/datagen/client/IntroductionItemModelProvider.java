@@ -34,6 +34,9 @@ public class IntroductionItemModelProvider extends ItemModelProvider {
                 IntroductionBlocks.CURSED_PLANKS);
 
         sapling(IntroductionBlocks.CURSED_SAPLING);
+
+        withExistingParent(IntroductionItems.SHEEP_SLIME_SPAWN_EGG.getId().getPath(),
+                mcLoc("item/template_spawn_egg"));
     }
 
     public void itemWithBlock(RegistryObject<Block> block) {

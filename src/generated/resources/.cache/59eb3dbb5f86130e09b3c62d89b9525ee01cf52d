@@ -1,4 +1,4 @@
-// 1.20.2	2024-05-10T16:12:02.4084101	Loot Tables
+// 1.20.2	2024-05-25T07:11:20.1755576	Loot Tables
 97fc5b067682680cf16f73f40d4ee437b81c42c7 data/introductionmod/loot_tables/blocks/cursed_button.json
 37072ef2a2b07ce048805b062d86d3845e927256 data/introductionmod/loot_tables/blocks/cursed_door.json
 0ce5dfe4cfe968c5c498441a7116daa13b800ccf data/introductionmod/loot_tables/blocks/cursed_fence.json
@@ -18,3 +18,4 @@ ea565b08cbd4b5d4246fd70e6a06c1abec1c76cf data/introductionmod/loot_tables/blocks
 387a24b27f96384ef9ddd2c5b625112ee2d7c6d0 data/introductionmod/loot_tables/blocks/raw_orihalcon_block.json
 9f21915e3e131901704853c30b860de31314d8d7 data/introductionmod/loot_tables/blocks/stripped_cursed_log.json
 440a4dba461a8bc2296321de1add6f577f66d226 data/introductionmod/loot_tables/blocks/stripped_cursed_wood.json
+b76b2e1210ddd36aa040c762810675e01f49dc0c data/introductionmod/loot_tables/entities/sheep_slime.json

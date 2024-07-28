@@ -35,11 +35,11 @@ public class IntroductionBiomeModifiers {
                 GenerationStep.Decoration.UNDERGROUND_ORES
         ));
         // 木が生成されるバイオームを設定
-        context.register(ADD_CURSED_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
-                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
-                HolderSet.direct(placedFeatures.getOrThrow(IntroductionPlacement.CURSED_TREE)),
-                GenerationStep.Decoration.VEGETAL_DECORATION
-        ));
+//        context.register(ADD_CURSED_TREE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+//                biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
+//                HolderSet.direct(placedFeatures.getOrThrow(IntroductionPlacement.CURSED_TREE)),
+//                GenerationStep.Decoration.VEGETAL_DECORATION
+//        ));
     }
 
     private static ResourceKey<BiomeModifier> createKey(String name) {
